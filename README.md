@@ -1,14 +1,14 @@
 # Seg-Depth Fusion Pipeline
 
-A high-performance, real-time segmentation and depth estimation pipeline designed for **NVIDIA RTX 6000 (Blackwell)** and other high-end GPUs. This project seamlessly integrates **SAM 3 (Segment Anything Model 3)** and **Depth Anything V3** to provide instance-aware depth maps.
+A high-performance, real-time segmentation and depth estimation pipeline designed for high-end NVIDIA GPUs. This project seamlessly integrates **SAM 3 (Segment Anything Model 3)** and **Depth Anything V3** to provide instance-aware depth maps.
 
 ![Demo Output](outputs/Image_2025-11-24_232150_411_result.png)
 
 ## Features
 
-- **Real-time Processing**: Optimized for high-throughput inference on Blackwell/Ada architecture.
+- **Real-time Processing**: Optimized for high-throughput inference.
 - **Instance-Aware Depth**: Combines semantic masks from SAM 3 with metric depth from Depth Anything 3.
-- **Automated Setup**: One-click environment configuration for complex dependencies (PyTorch Nightly + Local Packages).
+- **Automated Setup**: One-click environment configuration for complex dependencies (PyTorch + Local Packages).
 - **Screen Capture Integration**: Built-in support for real-time screen inference.
 
 ## Installation
@@ -23,7 +23,7 @@ cd SegDepthFusion
 ```
 
 ### 2. One-Click Setup (PowerShell)
-We provide an automated script to handle the specific PyTorch versions (2.9.0+ / Nightly) and local package compilation required for RTX 6000 series cards.
+We provide an automated script to handle PyTorch versions and local package compilation.
 
 Run this command in PowerShell:
 ```powershell

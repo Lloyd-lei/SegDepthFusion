@@ -1,6 +1,6 @@
 # Seg-Depth Installation Guide (Windows 11)
 
-Dependency management for this project can be tricky due to specific hardware requirements (e.g., NVIDIA Blackwell/Ada GPUs) and local package dependencies (SAM3, Depth Anything 3). 
+Dependency management for this project can be tricky due to specific hardware requirements and local package dependencies (SAM3, Depth Anything 3). 
 
 We have provided an automated script to handle everything for you.
 
@@ -13,7 +13,7 @@ We have provided an automated script to handle everything for you.
 ### 1. One-Click Installation
 This script will automatically:
 - Create a clean Conda environment named `seg_depth_auto` (Python 3.11)
-- Install PyTorch (compatible with RTX 6000/Blackwell)
+- Install PyTorch
 - Install all required dependencies
 - Compile and install local `sam3` and `Depth-Anything-3` packages
 

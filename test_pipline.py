@@ -98,7 +98,7 @@ def test_pipeline(image_path: str = None, folder_path: str = None):
     print("Loading SAM3 model...")
     sam3 = SAM3Model(device="cuda", confidence_threshold=0.5)
     
-    print("Loading DA3 model (with PyTorch 2.10 support)...")
+    print("Loading DA3 model...")
     da3 = DA3Model(
         model_name="depth-anything/DA3NESTED-GIANT-LARGE",
         device="cuda"

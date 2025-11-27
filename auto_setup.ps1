@@ -1,4 +1,4 @@
-# Auto Setup Script for Seg Depth (Blackwell / Ada Support)
+# Auto Setup Script for Seg Depth
 # Usage: powershell -ExecutionPolicy Bypass -File auto_setup.ps1
 
 $EnvName = "seg_depth_auto"
@@ -40,7 +40,7 @@ if ($InstallStatus -ne 0) {
 
 # 3. Install Safe Requirements
 Write-Host "[3/5] Installing General Dependencies..." -ForegroundColor Yellow
-conda run -n $EnvName pip install -r requirements_safe.txt
+conda run -n $EnvName pip install -r requirements.txt
 
 # 4. Install Local Packages (Editable Mode)
 Write-Host "[4/5] Installing Local Packages (SAM3 & DA3)..." -ForegroundColor Yellow

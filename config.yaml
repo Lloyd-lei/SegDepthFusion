@@ -1,0 +1,66 @@
+# Seg-Depth Pipeline Configuration
+
+# Screen Capture Settings
+screen:
+  # Capture region (null for full screen)
+  # Format: [x, y, width, height]
+  region: null  # e.g., [0, 0, 1920, 1080]
+  fps: 30  # Frames per second to capture
+  monitor: 5  # Monitor number (1 for primary)
+
+# SAM3 Model Settings
+sam3:
+  model_name: "sam3_image"  # Model architecture
+  checkpoint_path: null  # Auto-download if null
+  device: "cuda"
+  # Text prompts for segmentation
+  prompts:
+    - "orange"
+    - "citrus"
+  # Confidence threshold for masks
+  confidence_threshold: 0.7
+
+# Depth Anything 3 Settings
+da3:
+  model_name: "depth-anything/DA3NESTED-GIANT-LARGE"
+  device: "cuda"
+  # Whether to normalize depth output
+  normalize_depth: true
+
+# Pipeline Settings
+pipeline:
+  # Process every N frames (1 = every frame)
+  frame_skip: 1
+  # Maximum queue size for processing
+  max_queue_size: 10
+
+# Visualization Settings
+visualization:
+  show_original: true
+  show_segmentation: true
+  show_depth: true
+  show_metrics: true
+  # Window size
+  window_width: 1600
+  window_height: 900
+  # Colormap for depth visualization
+  depth_colormap: "turbo"  # Options: turbo, viridis, plasma, jet
+
+# Reward Calculation Settings
+reward:
+  # Enable reward calculation
+  enabled: true
+  # Target object for reward (should match one of the prompts)
+  target_prompt: "orange"
+  # Weight for area component in reward
+  area_weight: 0.5
+  # Weight for depth component in reward
+  depth_weight: 0.5
+  # History size for reward smoothing
+  history_size: 30
+
+# Logging Settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  save_frames: false
+  output_dir: "./outputs"

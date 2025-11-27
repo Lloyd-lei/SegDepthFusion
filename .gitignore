@@ -1,0 +1,53 @@
+# Ignore build and temporary files
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+*.pyd
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore outputs and debug images
+outputs/
+workspace/
+agent_output/
+demo_output/
+
+# Ignore large model weights and data
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+*.mp4
+*.gif
+*.jpg
+*.png
+*.jpeg
+
+# Ignore environment files (except auto_setup.ps1)
+miniconda3/
+anaconda3/
+env/
+venv/
+.env
+*.txt
+!requirements.txt
+!conda-pkg-list.txt
+
+# Ignore user-specific configs
+config_local.yaml
+
+# Keep specific important assets if needed, but generally ignore image folders
+orange_photos/
+Depth-Anything-3/assets/
+sam3/assets/
+
+# Ignore logs
+*.log
+
+# Ignore terminal history
+*.txt
+!install.md
+

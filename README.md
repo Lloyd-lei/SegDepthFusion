@@ -1,4 +1,4 @@
-# Seg-Depth Fusion Pipeline
+# SegDepthFusion
 
 A high-performance, real-time segmentation and depth estimation pipeline designed for high-end NVIDIA GPUs. This project seamlessly integrates **SAM 3 (Segment Anything Model 3)** and **Depth Anything V3** to provide instance-aware depth maps.
 
